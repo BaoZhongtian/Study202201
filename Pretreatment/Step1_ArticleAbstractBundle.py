@@ -66,10 +66,10 @@ def get_art_abs(story_file):
 
 
 if __name__ == '__main__':
-    cnn_path = 'C:/ProjectData/CNNDM_Dataset/cnn_stories/cnn/stories/'
-    dm_path = 'C:/ProjectData/CNNDM_Dataset/dailymail_stories/dailymail/stories'
-    url_list = read_text_file('C:/ProjectData/CNNDM_Dataset/url_lists/all_val.txt')
-    save_name = 'CNNDM_val.json'
+    cnn_path = 'D:/ProjectData/CNNDM/cnn/stories/'
+    dm_path = 'D:/ProjectData/CNNDM/dailymail_stories/dailymail/stories'
+    url_list = read_text_file('D:/ProjectData/CNNDM/url_lists/all_test.txt')
+    save_name = 'CNNDM_test.json'
     url_hashes = get_url_hashes(url_list)
 
     total_sample = []
