@@ -35,9 +35,15 @@ def NCLS_Loader(sample_number=1000, use_part='train'):
 
 
 if __name__ == '__main__':
-    result = NCLS_Loader(sample_number=999999)
-    print('\n', len(result))
+    result = NCLS_Loader(sample_number=10)
+    # print('\n', len(result))
     # print(result[2357])
-    exit()
+    # exit()
     for sample in result[0]:
         print(sample, result[0][sample])
+    import transformers
+
+    tokenizer = transformers.MarianTokenizer.from_pretrained("C:/PythonProject/opus-mt-en-zh")
+    token_result = tokenizer.encode(result[0]['Article'].lower())
+    print(result[0]['Article'].lower())
+    print(tokenizer.decode(token_result, skip_special_tokens=True))

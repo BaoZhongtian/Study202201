@@ -1,0 +1,195 @@
+"C:\Program Files (x86)\Python36\python.exe" C:/PythonProject/Study202201/Run/Exp_BartFineTuning_NCLS_Mono.py
+2022-02-11 20:13:35.894191: W tensorflow/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'cudart64_110.dll'; dlerror: cudart64_110.dll not found
+2022-02-11 20:13:35.894901: I tensorflow/stream_executor/cuda/cudart_stub.cc:29] Ignore above cudart dlerror if you do not have a GPU set up on your machine.
+[Training] 999/1000000 [..............................] - ETA: 69:38:31  loss: 4.3572
+Total 1000 Loss = 4316.881773710251
+[Training] 1999/1000000 [..............................] - ETA: 73:44:20  loss: 2.6601
+Total 1000 Loss = 2975.564675092697
+[Training] 2999/1000000 [..............................] - ETA: 74:28:51  loss: 2.1963
+Total 1000 Loss = 2897.909796535969
+[Training] 3999/1000000 [..............................] - ETA: 74:28:26  loss: 2.5104
+Total 1000 Loss = 2796.0678520202637
+[Training] 4999/1000000 [..............................] - ETA: 74:14:27  loss: 3.6867
+Total 1000 Loss = 2754.7839846611023
+[Training] 5999/1000000 [..............................] - ETA: 74:02:09  loss: 3.2891
+Total 1000 Loss = 2700.6787309646606
+[Training] 6999/1000000 [..............................] - ETA: 73:55:38  loss: 2.2148
+Total 1000 Loss = 2641.69102871418
+[Training] 7999/1000000 [..............................] - ETA: 73:53:19  loss: 2.8097
+Total 1000 Loss = 2648.1075009703636
+[Training] 8999/1000000 [..............................] - ETA: 73:47:46  loss: 2.6899
+Total 1000 Loss = 2591.9301273822784
+[Training] 9999/1000000 [..............................] - ETA: 73:41:32  loss: 1.2887
+Total 1000 Loss = 2613.5122103095055
+[Training] 10999/1000000 [..............................] - ETA: 73:38:47  loss: 2.6424
+Total 1000 Loss = 2589.323197543621
+[Training] 11999/1000000 [..............................] - ETA: 73:33:00  loss: 2.8590
+Total 1000 Loss = 2555.364906847477
+[Training] 12999/1000000 [..............................] - ETA: 73:25:45  loss: 2.2418
+Total 1000 Loss = 2551.1226311326027
+[Training] 13999/1000000 [..............................] - ETA: 73:18:26  loss: 2.5479
+Total 1000 Loss = 2553.8680871129036
+[Training] 14650/1000000 [..............................] - ETA: 73:22:03  loss: 4.4060 Traceback (most recent call last):
+  File "C:/PythonProject/Study202201/Run/Exp_BartFineTuning_NCLS_Mono.py", line 67, in <module>
+    loss.backward()
+  File "C:\Program Files (x86)\Python36\lib\site-packages\torch\_tensor.py", line 255, in backward
+    torch.autograd.backward(self, gradient, retain_graph, create_graph, inputs=inputs)
+  File "C:\Program Files (x86)\Python36\lib\site-packages\torch\autograd\__init__.py", line 149, in backward
+    allow_unreachable=True, accumulate_grad=True)  # allow_unreachable flag
+RuntimeError: CUDA out of memory. Tried to allocate 612.00 MiB (GPU 0; 11.00 GiB total capacity; 8.23 GiB already allocated; 0 bytes free; 8.67 GiB reserved in total by PyTorch)
+
+进程已结束，退出代码 1
+
+
+"C:\Program Files (x86)\Python36\python.exe" C:/PythonProject/Study202201/Test3.py
+2022-02-13 11:39:32.031394: W tensorflow/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'cudart64_110.dll'; dlerror: cudart64_110.dll not found
+2022-02-13 11:39:32.031859: I tensorflow/stream_executor/cuda/cudart_stub.cc:29] Ignore above cudart dlerror if you do not have a GPU set up on your machine.
+Downloading: 2.81kB [00:00, 698kB/s]
+Downloading: 18.6kB [00:00, 4.66MB/s]
+Downloading: 41.5kB [00:00, 6.96MB/s]
+Downloading and preparing dataset wmt16/ro-en (download: 274.05 MiB, generated: 180.62 MiB, post-processed: Unknown size, total: 454.67 MiB) to C:\Users\Administrator\.cache\huggingface\datasets\wmt16\ro-en\1.0.0\9e0038fe4cc117bd474d2774032cc133e355146ed0a47021b2040ca9db4645c0...
+  0%|          | 0/4 [00:00<?, ?it/s]
+Downloading:   0%|          | 0.00/225M [00:00<?, ?B/s]
+Downloading:   0%|          | 17.4k/225M [00:00<45:15, 82.9kB/s]
+Downloading:   0%|          | 51.2k/225M [00:00<28:43, 131kB/s]
+Downloading:   0%|          | 138k/225M [00:00<14:29, 259kB/s]
+Downloading:   0%|          | 295k/225M [00:00<08:22, 448kB/s]
+Downloading:   0%|          | 608k/225M [00:01<04:30, 830kB/s]
+Downloading:   0%|          | 1.10M/225M [00:01<02:48, 1.33MB/s]
+Downloading:   1%|          | 2.19M/225M [00:01<01:25, 2.60MB/s]
+Downloading:   2%|▏         | 4.41M/225M [00:01<00:42, 5.14MB/s]
+Downloading:   3%|▎         | 7.07M/225M [00:01<00:24, 8.93MB/s]
+Downloading:   4%|▎         | 8.25M/225M [00:01<00:25, 8.64MB/s]
+Downloading:   4%|▍         | 9.85M/225M [00:02<00:24, 8.86MB/s]
+Downloading:   6%|▌         | 12.6M/225M [00:02<00:20, 10.3MB/s]
+Downloading:   7%|▋         | 15.4M/225M [00:02<00:18, 11.4MB/s]
+Downloading:   8%|▊         | 18.2M/225M [00:02<00:17, 12.0MB/s]
+Downloading:   9%|▉         | 21.0M/225M [00:02<00:16, 12.4MB/s]
+Downloading:  11%|█         | 23.9M/225M [00:03<00:15, 12.7MB/s]
+Downloading:  12%|█▏        | 26.7M/225M [00:03<00:15, 13.0MB/s]
+Downloading:  13%|█▎        | 29.6M/225M [00:03<00:14, 13.1MB/s]
+Downloading:  14%|█▍        | 32.4M/225M [00:03<00:14, 13.2MB/s]
+Downloading:  16%|█▌        | 35.3M/225M [00:04<00:14, 13.4MB/s]
+Downloading:  17%|█▋        | 38.2M/225M [00:04<00:13, 13.4MB/s]
+Downloading:  18%|█▊        | 41.1M/225M [00:04<00:13, 13.5MB/s]
+Downloading:  20%|█▉        | 44.0M/225M [00:04<00:13, 13.6MB/s]
+Downloading:  21%|██        | 46.9M/225M [00:04<00:13, 13.7MB/s]
+Downloading:  22%|██▏       | 49.9M/225M [00:05<00:12, 13.8MB/s]
+Downloading:  24%|██▎       | 53.0M/225M [00:05<00:12, 13.9MB/s]
+Downloading:  25%|██▍       | 56.0M/225M [00:05<00:11, 14.2MB/s]
+Downloading:  26%|██▋       | 59.1M/225M [00:05<00:11, 14.3MB/s]
+Downloading:  28%|██▊       | 62.3M/225M [00:05<00:11, 14.4MB/s]
+Downloading:  29%|██▉       | 65.5M/225M [00:06<00:10, 14.7MB/s]
+Downloading:  31%|███       | 68.8M/225M [00:06<00:10, 14.9MB/s]
+Downloading:  32%|███▏      | 72.0M/225M [00:06<00:10, 15.2MB/s]
+Downloading:  33%|███▎      | 75.3M/225M [00:06<00:09, 15.2MB/s]
+Downloading:  35%|███▍      | 78.6M/225M [00:06<00:09, 15.3MB/s]
+Downloading:  36%|███▋      | 81.9M/225M [00:07<00:09, 15.5MB/s]
+Downloading:  38%|███▊      | 85.3M/225M [00:07<00:08, 15.6MB/s]
+Downloading:  39%|███▉      | 88.7M/225M [00:07<00:08, 15.8MB/s]
+Downloading:  41%|████      | 92.1M/225M [00:07<00:08, 15.9MB/s]
+Downloading:  42%|████▏     | 95.6M/225M [00:08<00:08, 16.1MB/s]
+Downloading:  44%|████▍     | 99.1M/225M [00:08<00:07, 16.3MB/s]
+Downloading:  46%|████▌     | 103M/225M [00:08<00:07, 16.3MB/s]
+Downloading:  47%|████▋     | 105M/225M [00:08<00:08, 15.0MB/s]
+Downloading:  48%|████▊     | 109M/225M [00:08<00:07, 15.5MB/s]
+Downloading:  50%|████▉     | 112M/225M [00:09<00:07, 15.9MB/s]
+Downloading:  51%|█████▏    | 116M/225M [00:09<00:06, 16.2MB/s]
+Downloading:  53%|█████▎    | 119M/225M [00:09<00:06, 16.5MB/s]
+Downloading:  55%|█████▍    | 123M/225M [00:09<00:06, 16.7MB/s]
+Downloading:  56%|█████▋    | 127M/225M [00:09<00:05, 17.0MB/s]
+Downloading:  58%|█████▊    | 130M/225M [00:10<00:05, 17.1MB/s]
+Downloading:  59%|█████▉    | 134M/225M [00:10<00:04, 19.9MB/s]
+Downloading:  60%|██████    | 136M/225M [00:10<00:04, 18.0MB/s]
+Downloading:  61%|██████▏   | 138M/225M [00:10<00:05, 16.0MB/s]
+Downloading:  63%|██████▎   | 141M/225M [00:10<00:05, 16.6MB/s]
+Downloading:  64%|██████▍   | 145M/225M [00:10<00:04, 17.0MB/s]
+Downloading:  66%|██████▌   | 149M/225M [00:11<00:04, 17.3MB/s]
+Downloading:  68%|██████▊   | 153M/225M [00:11<00:04, 17.7MB/s]
+Downloading:  70%|██████▉   | 157M/225M [00:11<00:03, 17.5MB/s]
+Downloading:  71%|███████▏  | 160M/225M [00:11<00:03, 17.9MB/s]
+Downloading:  73%|███████▎  | 164M/225M [00:12<00:03, 18.1MB/s]
+Downloading:  75%|███████▍  | 168M/225M [00:12<00:03, 18.3MB/s]
+Downloading:  77%|███████▋  | 172M/225M [00:12<00:02, 18.6MB/s]
+Downloading:  78%|███████▊  | 176M/225M [00:12<00:02, 18.8MB/s]
+Downloading:  80%|████████  | 181M/225M [00:12<00:02, 18.9MB/s]
+Downloading:  82%|████████▏ | 184M/225M [00:13<00:02, 17.8MB/s]
+Downloading:  84%|████████▎ | 188M/225M [00:13<00:02, 18.3MB/s]
+Downloading:  84%|████████▍ | 190M/225M [00:13<00:02, 14.7MB/s]
+Downloading:  85%|████████▌ | 192M/225M [00:13<00:02, 13.6MB/s]
+Downloading:  86%|████████▋ | 195M/225M [00:13<00:02, 13.3MB/s]
+Downloading:  88%|████████▊ | 197M/225M [00:14<00:02, 13.1MB/s]
+Downloading:  88%|████████▊ | 199M/225M [00:14<00:02, 10.4MB/s]
+Downloading:  89%|████████▉ | 200M/225M [00:14<00:02, 10.2MB/s]
+Downloading:  90%|████████▉ | 202M/225M [00:14<00:02, 10.1MB/s]
+Downloading:  91%|█████████ | 205M/225M [00:15<00:01, 11.0MB/s]
+Downloading:  92%|█████████▏| 208M/225M [00:15<00:01, 11.7MB/s]
+Downloading:  94%|█████████▎| 211M/225M [00:15<00:01, 12.2MB/s]
+Downloading:  95%|█████████▍| 213M/225M [00:15<00:00, 12.6MB/s]
+Downloading:  96%|█████████▌| 216M/225M [00:15<00:00, 12.9MB/s]
+Downloading:  97%|█████████▋| 219M/225M [00:16<00:00, 13.2MB/s]
+Downloading: 100%|██████████| 225M/225M [00:16<00:00, 13.8MB/s]
+ 25%|██▌       | 1/4 [00:21<01:03, 21.28s/it]
+Downloading:   0%|          | 0.00/23.5M [00:00<?, ?B/s]
+Downloading:   0%|          | 16.4k/23.5M [00:00<05:25, 72.1kB/s]
+Downloading:   0%|          | 45.1k/23.5M [00:00<03:49, 102kB/s]
+Downloading:   0%|          | 111k/23.5M [00:00<02:06, 184kB/s]
+Downloading:   1%|          | 258k/23.5M [00:00<01:04, 361kB/s]
+Downloading:   2%|▏         | 520k/23.5M [00:01<00:36, 633kB/s]
+Downloading:   4%|▍         | 1.03M/23.5M [00:01<00:19, 1.16MB/s]
+Downloading:   7%|▋         | 1.73M/23.5M [00:01<00:12, 1.73MB/s]
+Downloading:  13%|█▎        | 2.98M/23.5M [00:01<00:07, 2.87MB/s]
+Downloading:  20%|█▉        | 4.63M/23.5M [00:02<00:04, 4.24MB/s]
+Downloading:  25%|██▍       | 5.86M/23.5M [00:02<00:03, 4.52MB/s]
+Downloading:  30%|███       | 7.11M/23.5M [00:02<00:03, 4.74MB/s]
+Downloading:  36%|███▌      | 8.40M/23.5M [00:02<00:03, 4.95MB/s]
+Downloading:  41%|████▏     | 9.71M/23.5M [00:03<00:02, 5.15MB/s]
+Downloading:  47%|████▋     | 11.1M/23.5M [00:03<00:02, 5.32MB/s]
+Downloading:  53%|█████▎    | 12.4M/23.5M [00:03<00:02, 5.47MB/s]
+Downloading:  59%|█████▉    | 13.9M/23.5M [00:03<00:01, 5.59MB/s]
+Downloading:  65%|██████▌   | 15.3M/23.5M [00:04<00:01, 5.71MB/s]
+Downloading:  71%|███████▏  | 16.8M/23.5M [00:04<00:01, 5.84MB/s]
+Downloading:  78%|███████▊  | 18.2M/23.5M [00:04<00:00, 5.95MB/s]
+Downloading:  84%|████████▍ | 19.8M/23.5M [00:04<00:00, 6.10MB/s]
+Downloading:  91%|█████████ | 21.3M/23.5M [00:04<00:00, 6.23MB/s]
+Downloading: 100%|██████████| 23.5M/23.5M [00:05<00:00, 4.50MB/s]
+ 50%|█████     | 2/4 [00:34<00:33, 16.62s/it]
+Downloading:   0%|          | 0.00/38.7M [00:00<?, ?B/s]
+Downloading:   0%|          | 172k/38.7M [00:00<00:22, 1.71MB/s]
+Downloading:   2%|▏         | 773k/38.7M [00:00<00:08, 4.22MB/s]
+Downloading:   9%|▉         | 3.66M/38.7M [00:00<00:02, 15.4MB/s]
+Downloading:  18%|█▊        | 7.08M/38.7M [00:00<00:01, 21.3MB/s]
+Downloading:  27%|██▋       | 10.5M/38.7M [00:00<00:01, 25.8MB/s]
+Downloading:  34%|███▍      | 13.1M/38.7M [00:00<00:01, 25.1MB/s]
+Downloading:  45%|████▍     | 17.3M/38.7M [00:00<00:00, 30.1MB/s]
+Downloading:  58%|█████▊    | 22.3M/38.7M [00:00<00:00, 36.0MB/s]
+Downloading:  67%|██████▋   | 25.9M/38.7M [00:00<00:00, 32.0MB/s]
+Downloading:  84%|████████▍ | 32.6M/38.7M [00:01<00:00, 41.7MB/s]
+Downloading: 100%|██████████| 38.7M/38.7M [00:01<00:00, 32.0MB/s]
+100%|██████████| 4/4 [00:39<00:00,  9.85s/it]
+100%|██████████| 4/4 [00:08<00:00,  2.06s/it]
+0it [00:00, ?it/s]
+  0%|          | 0/3 [00:00<?, ?it/s]Dataset wmt16 downloaded and prepared to C:\Users\Administrator\.cache\huggingface\datasets\wmt16\ro-en\1.0.0\9e0038fe4cc117bd474d2774032cc133e355146ed0a47021b2040ca9db4645c0. Subsequent calls will reuse this data.
+100%|██████████| 3/3 [00:00<00:00, 86.09it/s]
+Some weights of the model checkpoint at C:/PythonProject/mbart-large-50 were not used when initializing MBartModel: ['lm_head.weight', 'final_logits_bias']
+- This IS expected if you are initializing MBartModel from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing MBartModel from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+['translation']
+Running tokenizer on train dataset: 100%|██████████| 2/2 [00:05<00:00,  2.59s/ba]
+Downloading: 5.65kB [00:00, 1.42MB/s]
+Traceback (most recent call last):
+  File "C:/PythonProject/Study202201/Test3.py", line 75, in <module>
+    metric = load_metric("sacrebleu")
+  File "C:\Program Files (x86)\Python36\lib\site-packages\datasets\load.py", line 1416, in load_metric
+    path, revision=revision, download_config=download_config, download_mode=download_mode
+  File "C:\Program Files (x86)\Python36\lib\site-packages\datasets\load.py", line 1291, in metric_module_factory
+    raise e1 from None
+  File "C:\Program Files (x86)\Python36\lib\site-packages\datasets\load.py", line 1284, in metric_module_factory
+    dynamic_modules_path=dynamic_modules_path,
+  File "C:\Program Files (x86)\Python36\lib\site-packages\datasets\load.py", line 603, in get_module
+    download_config=self.download_config,
+  File "C:\Program Files (x86)\Python36\lib\site-packages\datasets\load.py", line 298, in _download_additional_modules
+    f"To be able to use {name}, you need to install the following dependencies"
+ImportError: To be able to use sacrebleu, you need to install the following dependencies['sacrebleu'] using 'pip install sacrebleu' for instance'
+
+进程已结束，退出代码 1

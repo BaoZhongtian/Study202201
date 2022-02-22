@@ -5,37 +5,23 @@ import torch
 from Tools import ProgressBar, SaveModel
 from Loader_NCLS import NCLS_Loader
 from transformers import BartForConditionalGeneration, BartTokenizer
+from transformers import MBartForConditionalGeneration, MBart50Tokenizer
 from transformers import EncoderDecoderModel, BertGenerationEncoder, BertGenerationDecoder, BertTokenizer
 from transformers import MT5ForConditionalGeneration, MT5Tokenizer
 
-os.environ["CUDA_VISIBLE_DEVICES"] = "0"
+os.environ["CUDA_VISIBLE_DEVICES"] = "1"
 batch_size = 1
 learning_rate = 1E-5
-episode_number = 10
+episode_number = 100
 
 if __name__ == '__main__':
-    # model = BartForConditionalGeneration.from_pretrained('C:/PythonProject/bart-large')
-    # tokenizer = BartTokenizer.from_pretrained('C:/PythonProject/bart-large')
-    # max_length = 1000
+    model = MBartForConditionalGeneration.from_pretrained('C:/PythonProject/mbart-large-50')
+    tokenizer = MBart50Tokenizer.from_pretrained('C:/PythonProject/mbart-large-50')
+    max_length = 512
 
-    # encoder = BertGenerationEncoder.from_pretrained(
-    #     "C:/PythonProject/bert-base-uncased", bos_token_id=101, eos_token_id=102)
-    # decoder = BertGenerationDecoder.from_pretrained(
-    #     "C:/PythonProject/bert-base-uncased", add_cross_attention=True, is_decoder=True, bos_token_id=101,
-    #     eos_token_id=102)
-    # model = EncoderDecoderModel(encoder=encoder, decoder=decoder)
-    # model.config.decoder_start_token_id = 101
-    # model.config.pad_token_id = 0
-    # tokenizer = BertTokenizer.from_pretrained('C:/PythonProject/bert-base-uncased')
-
-    model = MT5ForConditionalGeneration.from_pretrained('C:/PythonProject/mt5-base')
-    tokenizer = MT5Tokenizer.from_pretrained('C:/PythonProject/mt5-base')
-    max_length = 640
-
-    train_data = NCLS_Loader(sample_number=100000)
-    save_path = 'E:/ProjectData/NCLS/MT5-finetuning-%dLength-100K/' % max_length
+    train_data = NCLS_Loader(sample_number=1000)
+    save_path = 'E:/ProjectData/NCLS/MonoLingual-MBART-finetuning-%dLength-1K/' % max_length
     if not os.path.exists(save_path): os.makedirs(save_path)
-    model = model.cuda()
 
     if torch.cuda.device_count() > 1:  # 判断是不是有多个GPU
         print("Let's use", torch.cuda.device_count(), "GPUs!")
@@ -51,7 +37,9 @@ if __name__ == '__main__':
             times += 1
 
             batch_article = [_['Article'] for _ in train_data[batch_index:batch_index + batch_size]]
+            # batch_summary = [_['CrossLingualSummary'] for _ in train_data[batch_index:batch_index + batch_size]]
             batch_summary = [_['Summary'] for _ in train_data[batch_index:batch_index + batch_size]]
+
             batch_article = tokenizer.batch_encode_plus(
                 batch_article, return_tensors='pt', max_length=max_length, truncation=True, padding=True)
             batch_summary = tokenizer.batch_encode_plus(
